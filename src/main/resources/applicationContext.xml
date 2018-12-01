@@ -9,6 +9,7 @@
     <context:property-placeholder location="classpath:jdbc.properties"/>
     <context:component-scan base-package="dao"/>
     <context:component-scan base-package="service"/>
+    <context:component-scan base-package="common"/>
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
         <!-- 基本属性 url、user、password -->
         <property name="url" value="${jdbc_url}"/>

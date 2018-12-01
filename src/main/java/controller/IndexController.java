@@ -26,7 +26,16 @@ public class IndexController {
     public String index() {
         return "/index/index";
     }
+    @RequestMapping("/index2")
+    public String index2() {
+        return "/dist/index";
+    }
 
+    @RequestMapping("/index3")
+    public String index3() {
+        return "/index";
+    }
+    
     @RequestMapping(value = "/sensor", method = RequestMethod.GET)
     @ResponseBody
     public ResEnv<List<Sensor>> fetchSensorsByName(String name) {
