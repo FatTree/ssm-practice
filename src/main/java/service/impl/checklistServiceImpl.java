@@ -39,9 +39,10 @@ public class checklistServiceImpl implements checklistService {
 	@Override
 	public int create(Checklist checklist) {
 		Date now = new Date();
-		SimpleDateFormat sdf = new SimpleDateFormat("yyMMddhhmmss");
-		String chId = "ch" + sdf.format(now);
-		checklist.setId(chId);
+//		SimpleDateFormat sdf = new SimpleDateFormat("yyMMddhhmmss");
+//		String chId = "ch" + sdf.format(now);
+		String id = checklist.getId();
+		checklist.setId(id);
 		return mapper.insert(checklist);
 	}
 
